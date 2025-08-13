@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID 세탁물 관리 플랫폼 - LaundrySync</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-microchip"></i>
+                    <span>LaundrySync</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#features">기능</a></li>
+                    <li><a href="#benefits">장점</a></li>
+                    <li><a href="#workflow">프로세스</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">RFID 기술로 혁신하는<br>B2B 세탁물 관리 플랫폼</h1>
+                <p class="hero-subtitle">실시간 추적부터 자동 분류까지, 세탁업계의 디지털 혁신을 선도합니다</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openDemo()">무료 데모 신청</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('features')">자세히 보기</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">99.8%</div>
+                        <div class="stat-label">추적 정확도</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">업무 효율 향상</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">실시간 모니터링</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="rfid-demo">
+                    <div class="rfid-tag active" data-tag="1">
+                        <i class="fas fa-microchip"></i>
+                        <span>RFID-001</span>
+                    </div>
+                    <div class="rfid-tag" data-tag="2">
+                        <i class="fas fa-microchip"></i>
+                        <span>RFID-002</span>
+                    </div>
+                    <div class="rfid-tag" data-tag="3">
+                        <i class="fas fa-microchip"></i>
+                        <span>RFID-003</span>
+                    </div>
+                    <div class="signal-waves">
+                        <div class="wave wave-1"></div>
+                        <div class="wave wave-2"></div>
+                        <div class="wave wave-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 기능 섹션 -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>핵심 기능</h2>
+                <p>세탁업계 전반의 운영 효율성을 극대화하는 통합 솔루션</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-feature="tracking">
+                    <div class="feature-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>실시간 추적</h3>
+                    <p>RFID 태그를 통한 세탁물의 실시간 위치 추적 및 상태 모니터링</p>
+                    <ul>
+                        <li>GPS 연동 위치 추적</li>
+                        <li>단계별 상태 업데이트</li>
+                        <li>실시간 알림 시스템</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-feature="automation">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>자동 분류</h3>
+                    <p>AI 기반 자동 분류 시스템으로 효율적인 세탁물 관리</p>
+                    <ul>
+                        <li>의류 종류별 자동 분류</li>
+                        <li>오염도 자동 감지</li>
+                        <li>최적 세탁 방법 추천</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-feature="management">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>통합 관리</h3>
+                    <p>공장, 지점, 운송까지 전 과정의 통합 대시보드</p>
+                    <ul>
+                        <li>실시간 대시보드</li>
+                        <li>성과 분석 리포트</li>
+                        <li>예측 분석</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-feature="inventory">
+                    <div class="feature-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>재고 관리</h3>
+                    <p>정확한 재고 추적과 자동화된 재고 관리 시스템</p>
+                    <ul>
+                        <li>실시간 재고 현황</li>
+                        <li>자동 재주문 알림</li>
+                        <li>손실 방지 시스템</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 장점 섹션 -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>왜 LaundrySync인가?</h2>
+                <p>기존 방식 대비 압도적인 효율성과 정확성</p>
+            </div>
+            <div class="benefits-content">
+                <div class="benefits-comparison">
+                    <div class="comparison-item">
+                        <div class="before">
+                            <h4>기존 방식</h4>
+                            <ul>
+                                <li><i class="fas fa-times"></i> 수작업 기반 관리</li>
+                                <li><i class="fas fa-times"></i> 분실 위험 높음</li>
+                                <li><i class="fas fa-times"></i> 실시간 추적 불가</li>
+                                <li><i class="fas fa-times"></i> 오류 발생 빈번</li>
+                            </ul>
+                        </div>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="after">
+                            <h4>LaundrySync</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 자동화된 RFID 관리</li>
+                                <li><i class="fas fa-check"></i> 99.8% 추적 정확도</li>
+                                <li><i class="fas fa-check"></i> 실시간 모니터링</li>
+                                <li><i class="fas fa-check"></i> 오류율 95% 감소</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">60%</div>
+                            <div class="stat-description">처리 시간 단축</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">35%</div>
+                            <div class="stat-description">운영 비용 절감</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-description">고객 만족도</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 워크플로우 섹션 -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <div class="section-header">
+                <h2>운영 프로세스</h2>
+                <p>세탁물의 접수부터 배송까지 전 과정을 한눈에</p>
+            </div>
+            <div class="workflow-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>접수 등록</h3>
+                        <p>RFID 태그 부착 및 시스템 등록</p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>운송 추적</h3>
+                        <p>실시간 위치 추적 및 상태 업데이트</p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>공장 처리</h3>
+                        <p>자동 분류 및 세탁 프로세스</p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>지점 배송</h3>
+                        <p>완료된 세탁물 지점별 배송</p>
+                    </div>
+                </div>
+            </div>
+            <div class="workflow-detail" id="workflow-detail">
+                <div class="detail-content active" data-detail="1">
+                    <h4>접수 등록 단계</h4>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-qrcode"></i>
+                            <span>RFID 태그 자동 부착</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-camera"></i>
+                            <span>세탁물 상태 촬영</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-list"></i>
+                            <span>고객 정보 자동 매칭</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-bell"></i>
+                            <span>접수 완료 알림 발송</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content" data-detail="2">
+                    <h4>운송 추적 단계</h4>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>실시간 GPS 추적</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span>온도/습도 모니터링</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-route"></i>
+                            <span>최적 경로 안내</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>이상 상황 즉시 알림</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content" data-detail="3">
+                    <h4>공장 처리 단계</h4>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-sort"></i>
+                            <span>AI 자동 분류</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <span>오염도 자동 감지</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>최적 세탁 프로그램 설정</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>품질 검사 자동화</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-content" data-detail="4">
+                    <h4>지점 배송 단계</h4>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-box"></i>
+                            <span>자동 포장 시스템</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-barcode"></i>
+                            <span>배송 라벨 자동 생성</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>배송 스케줄 최적화</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>완료 알림 및 평가</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>지금 시작하세요</h2>
+                <p>LaundrySync로 세탁업계의 디지털 혁신을 경험해보세요</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="openDemo()">무료 체험 신청</button>
+                    <button class="btn btn-outline" onclick="openContact()">상담 예약</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>문의하기</h2>
+                    <p>전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>전화 문의</strong>
+                                <span>1588-0000</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>이메일</strong>
+                                <span>info@laundrysync.co.kr</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>운영 시간</strong>
+                                <span>평일 9:00 ~ 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="company">회사명 *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">담당자명 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">연락처 *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">이메일 *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">사업 형태</label>
+                            <select id="business" name="business">
+                                <option value="">선택해주세요</option>
+                                <option value="factory">세탁공장</option>
+                                <option value="branch">세탁지점</option>
+                                <option value="transport">운송업체</option>
+                                <option value="platform">플랫폼 운영</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">문의 내용</label>
+                            <textarea id="message" name="message" rows="4" placeholder="궁금한 점이나 요청사항을 자유롭게 작성해주세요"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">문의 전송</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-microchip"></i>
+                        <span>LaundrySync</span>
+                    </div>
+                    <p>RFID 기술로 혁신하는 B2B 세탁물 관리 플랫폼</p>
+                </div>
+                <div class="footer-section">
+                    <h4>솔루션</h4>
+                    <ul>
+                        <li><a href="#features">실시간 추적</a></li>
+                        <li><a href="#features">자동 분류</a></li>
+                        <li><a href="#features">통합 관리</a></li>
+                        <li><a href="#features">재고 관리</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원</h4>
+                    <ul>
+                        <li><a href="#contact">기술 지원</a></li>
+                        <li><a href="#contact">설치 가이드</a></li>
+                        <li><a href="#contact">교육 프로그램</a></li>
+                        <li><a href="#contact">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>회사</h4>
+                    <ul>
+                        <li><a href="#about">회사 소개</a></li>
+                        <li><a href="#news">뉴스</a></li>
+                        <li><a href="#careers">채용</a></li>
+                        <li><a href="#contact">연락처</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LaundrySync. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">개인정보처리방침</a>
+                    <a href="#terms">이용약관</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 데모 모달 -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>무료 데모 신청</h2>
+            <p>LaundrySync의 혁신적인 기능을 직접 체험해보세요</p>
+            <form id="demoForm">
+                <div class="form-group">
+                    <label for="demoCompany">회사명 *</label>
+                    <input type="text" id="demoCompany" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoName">담당자명 *</label>
+                    <input type="text" id="demoName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoPhone">연락처 *</label>
+                    <input type="tel" id="demoPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoEmail">이메일 *</label>
+                    <input type="email" id="demoEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoDate">희망 데모 일시</label>
+                    <input type="datetime-local" id="demoDate" name="date">
+                </div>
+                <button type="submit" class="btn btn-primary">데모 신청하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
