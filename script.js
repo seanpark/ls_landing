@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 개발 모드에서의 디버깅 정보
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        console.log('LaundrySync Landing Page - Development Mode');
+        console.log('린넨스토리 Landing Page - Development Mode');
         console.log('All interactions initialized successfully');
     }
 });
